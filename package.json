@@ -1,0 +1,31 @@
+{
+  "name": "hast-util-from-url",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist/index.js",
+  "bin": {
+    "hast-util-from-url": "./bin/index.js"
+  },
+  "scripts": {
+    "dev": "node_modules/.bin/tsc"
+  },
+  "devDependencies": {
+    "@types/exit": "^0.1.30",
+    "@types/jsdom": "^12.2.4",
+    "@types/node": "^12.6.2",
+    "prettier": "^1.18.2",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "keywords": [
+    "hast"
+  ],
+  "author": "Shohei Ohta<shohei.ot@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "exit": "^0.1.2",
+    "hast-util-from-dom": "^2.0.1",
+    "jsdom": "^15.1.1",
+    "unist-util-inspect": "^4.1.4"
+  }
+}
