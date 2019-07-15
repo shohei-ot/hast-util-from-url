@@ -1,21 +1,20 @@
-hast-util-from-url
-========================
+# hast-util-from-url
 
-# Install
+## Install
 
 ```sh
 npm install hast-util-from-url
 ```
 
-# Usage
+## Usage
 
-## CLI
+### CLI
 
 ```sh
 hast-util-from-url http://path/to/html
 ```
 
-## Node.js
+### Node.js
 
 ```js
 const fromUrl = require('hast-util-from-url')
