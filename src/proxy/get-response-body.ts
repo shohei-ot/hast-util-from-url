@@ -1,7 +1,7 @@
 const http = require('http')
 const https = require('https')
+const isUrl = require('is-url')
 
-const isUrl = (url: string) => /^[a-z]+:\/\/.+$/.test(url)
 const isHttps = (url: string) => isUrl(url) && /^https/.test(url)
 
 module.exports = async function getResponseBody(url: string): Promise<string> {
