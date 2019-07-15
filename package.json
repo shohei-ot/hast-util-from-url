@@ -20,6 +20,10 @@
   "keywords": [
     "hast"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shohei-ot/hast-util-from-url.git"
+  },
   "author": "Shohei Ohta<shohei.ot@gmail.com>",
   "license": "ISC",
   "dependencies": {
