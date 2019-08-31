@@ -1,10 +1,13 @@
+import isBrowser from 'is-in-browser'
+import axios from 'axios'
+
 const http = require('http')
 const https = require('https')
 const isUrl = require('is-url')
 
 const isHttps = (url: string) => isUrl(url) && /^https/.test(url)
 
-module.exports = async function getResponseBody(url: string): Promise<string> {
+export const getResponseBodyNodeJs = async (url: string): Promise<string> => {
   const client = isHttps(url) ? https : http
   const resp: string = await new Promise((resolve, reject) => {
     let buff: string = ''
@@ -26,4 +29,18 @@ module.exports = async function getResponseBody(url: string): Promise<string> {
     req.end()
   })
   return resp
+}
+
+export const getResponseBodyBrowser = async (url: string): Promise<string> => {
+  const response = await axios.get(url, {
+    responseType: 'text'
+  })
+  return response.data
+}
+
+export default (url: string) => {
+  if (isBrowser) {
+    return getResponseBodyBrowser(url)
+  }
+  return getResponseBodyNodeJs(url)
 }

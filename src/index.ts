@@ -1,9 +1,10 @@
-const { JSDOM } = require('jsdom')
+import getResponseBody from './proxy/get-response-body'
+import getDocumentFromString from './adapter/get-document-from-string'
+
 const fromDOM = require('hast-util-from-dom')
-const getResponseBody = require('./proxy/get-response-body')
 
 module.exports = async function(url: string) {
-  const body = await getResponseBody(url)
-  const { window } = new JSDOM(body)
-  return fromDOM(window.document)
+  const responseBody = await getResponseBody(url)
+  const docm = getDocumentFromString(responseBody)
+  return fromDOM(docm)
 }
