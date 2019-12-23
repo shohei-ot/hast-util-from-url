@@ -12,7 +12,7 @@
   "devDependencies": {
     "@types/exit": "0.1.30",
     "@types/jsdom": "12.2.4",
-    "@types/node": "12.12.21",
+    "@types/node": "12.12.22",
     "prettier": "1.19.1",
     "ts-node": "8.5.4",
     "typescript": "3.7.3"
