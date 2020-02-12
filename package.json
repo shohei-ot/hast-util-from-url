@@ -31,5 +31,13 @@
     "hast-util-from-dom": "^2.0.1",
     "is-url": "^1.2.4",
     "jsdom": "^16.0.0"
+  },
+  "renovate": {
+    "packageRules": [
+      {
+        "updateTypes": ["minor", "patch", "pin", "digest"],
+        "automerge": true
+      }
+    ]
   }
 }
