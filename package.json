@@ -14,7 +14,7 @@
     "@types/jsdom": "12.2.4",
     "@types/node": "12.12.27",
     "prettier": "1.19.1",
-    "ts-node": "8.6.2",
+    "ts-node": "8.10.2",
     "typescript": "3.9.9"
   },
   "keywords": [
