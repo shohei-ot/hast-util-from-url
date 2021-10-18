@@ -30,7 +30,7 @@
     "exit": "^0.1.2",
     "hast-util-from-dom": "^2.0.1",
     "is-url": "^1.2.4",
-    "jsdom": "^16.0.0"
+    "jsdom": "^18.0.0"
   },
   "renovate": {
     "packageRules": [
